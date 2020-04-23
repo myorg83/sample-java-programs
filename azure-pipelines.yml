@@ -19,7 +19,7 @@ pool:
 
 steps:
 - checkout: self
-- checkout: git://myproject/sample-project-maven@sample-project-maven
+- checkout: sample-project-maven
 
 - script: dir $(Build.SourcesDirectory)
 - task: Maven@3
