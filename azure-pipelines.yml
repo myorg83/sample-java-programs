@@ -17,7 +17,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- checkout: self
+- checkout: git://myproject/sample-java-programs@refs/heads/master
 - checkout: git://myproject/sample-project-maven@refs/heads/master
 
 - script: dir $(Build.SourcesDirectory)
