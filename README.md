@@ -1,6 +1,7 @@
 [![Build Status](https://travis-ci.org/chrishantha/sample-java-programs.svg?branch=master)](https://travis-ci.org/chrishantha/sample-java-programs)
 
 Test From master
+test2
 
 Sample Java Programs
 ====================
