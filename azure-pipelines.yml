@@ -12,6 +12,7 @@ resources:
     type: github
     endpoint: myorg83
     name:  myorg83/sample-java-programs
+    ref: dev
 
 trigger:
 - master
