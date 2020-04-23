@@ -18,7 +18,7 @@ pool:
 
 steps:
 - checkout: self
-- checkout: git://myproject/java-sample-2@refs/heads/master
+- checkout: git://myproject/myorg83/java-sample-2@refs/heads/master
 
 - script: dir $(Build.SourcesDirectory)
 - task: Maven@3
