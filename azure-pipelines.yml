@@ -7,7 +7,8 @@ resources:
   - repository: MyGitHubRepo
     type: github
     endpoint: myorg83
-    name:  myorg83/java-sample-2 
+    name:  myorg83/java-sample-2
+    ref: master
 
 trigger:
 - master
@@ -18,7 +19,7 @@ pool:
 
 steps:
 - checkout: self
-- checkout: MyGitHubRepo
+- checkout: git://myproject/MyGitHubRepo
 
 - script: dir $(Build.SourcesDirectory)
 - task: Maven@3
