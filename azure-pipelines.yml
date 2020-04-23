@@ -8,6 +8,11 @@ resources:
     type: github
     endpoint: myorg83
     name:  myorg83/java-sample-2
+  repositories:
+  - repository: MyGitHubRepo2
+    type: github
+    endpoint: myorg83
+    name:  myorg83/sample-java-programs
 
 trigger:
 - master
