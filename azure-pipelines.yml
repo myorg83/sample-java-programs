@@ -9,7 +9,13 @@ resources:
     endpoint: myorg83
     name:  myorg83/sample-project-maven
     ref: master
+  - repository: sample-java-programs
+    type: github
+    endpoint: myorg83
+    name:  myorg83/sample-java-programs
+    ref: master
 
+    
 trigger:
 - master
 
@@ -17,7 +23,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- checkout: git://myproject/myorg83/sample-java-programs@refs/heads/master
+- checkout: git://myproject/sample-java-programs@refs/heads/master
 - checkout: git://myproject/sample-project-maven@refs/heads/master
 
 - script: dir $(Build.SourcesDirectory)
