@@ -18,7 +18,7 @@ pool:
 
 steps:
 - checkout: self
-- checkout: 
+- checkout: none
 
 - script: dir $(Build.SourcesDirectory)
 - task: Maven@3
