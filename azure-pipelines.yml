@@ -4,7 +4,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 resources:
   repositories:
-  - repository: sample-project-maven
+  - repository: mavenrepo
     type: github
     endpoint: myorg83
     name:  myorg83/sample-project-maven
@@ -19,8 +19,8 @@ pool:
 
 steps:
 - checkout: self
-- checkout: sample-project-maven
-  path: $(Agent.WorkDir)/s/sample-project-maven
+- checkout: mavenrepo
+  path: buildTools
 
 - script: dir $(Build.SourcesDirectory)
 - task: Maven@3
