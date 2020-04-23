@@ -6,7 +6,7 @@ resources:
   repositories:
   - repository: java-sample-2
     type: github
-    endpoint: connection-to-my-rg
+    endpoint: myorg83
     name:  myorg83/java-sample-2
     ref: master
 
