@@ -23,8 +23,8 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- checkout: git://myproject/sample-java-programs@refs/heads/master
-- checkout: git://myproject/sample-project-maven@refs/heads/master
+- checkout: self
+
 
 - script: dir $(Build.SourcesDirectory)
 - task: Maven@3
