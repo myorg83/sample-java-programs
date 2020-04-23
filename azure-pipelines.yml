@@ -18,7 +18,7 @@ pool:
 
 steps:
 - checkout: self
-- checkout: java-sample-2
+- checkout: /home/vsts/work/1/s/java-sample-2
 
 - script: dir $(Build.SourcesDirectory)
 - task: Maven@3
