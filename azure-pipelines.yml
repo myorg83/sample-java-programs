@@ -4,7 +4,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 resources:
   repositories:
-  - repository: myorg83/java-sample-2
+  - repository: java-sample-2
     type: github
     endpoint: myorg83
     name:  myorg83/java-sample-2
@@ -12,14 +12,13 @@ resources:
 
 trigger:
 - master
-- dev
 
 pool:
   vmImage: 'ubuntu-latest'
 
 steps:
 - checkout: self
-- checkout: git://myproject/myorg83/java-sample-2
+- checkout: java-sample-2
 
 - script: dir $(Build.SourcesDirectory)
 - task: Maven@3
