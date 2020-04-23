@@ -4,10 +4,10 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 resources:
   repositories:
-  - repository: myorg83/java-sample-2
+  - repository: sample-project-maven
     type: github
     endpoint: myorg83
-    name:  myorg83/java-sample-2
+    name:  myorg83/sample-project-maven
     ref: master
 
 trigger:
@@ -18,7 +18,7 @@ pool:
 
 steps:
 - checkout: self
-- checkout: git://myproject/myorg83/java-sample-2@refs/heads/master
+- checkout: git://myproject/sample-project-maven@refs/heads/master
 
 - script: dir $(Build.SourcesDirectory)
 - task: Maven@3
