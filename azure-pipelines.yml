@@ -20,7 +20,7 @@ pool:
 steps:
 - checkout: self
 - checkout: sample-project-maven
-  path: $(Build.SourcesDirectory)/sample-project-maven
+  path: $(Agent.WorkDir)/s/sample-project-maven
 
 - script: dir $(Build.SourcesDirectory)
 - task: Maven@3
