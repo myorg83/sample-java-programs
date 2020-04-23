@@ -18,9 +18,10 @@ pool:
 
 steps:
 - checkout: self
-- checkout: none
+- checkout: java-sample-2
 
 - script: dir $(Build.SourcesDirectory)
+- script: dir $(Agent.BuildDirectory)
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
