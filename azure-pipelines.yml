@@ -19,8 +19,9 @@ pool:
 
 steps:
 - checkout: self
+  root: $(Pipeline.DefaultSourcesDirectory)/module1
 - checkout: mavenrepo
-  path: buildTools
+  path: $(Pipeline.DefaultSourcesDirectory)/module2
 
 - script: dir $(Build.SourcesDirectory)
 - task: Maven@3
