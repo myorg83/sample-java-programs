@@ -24,7 +24,8 @@ pool:
 
 steps:
 - checkout: self
-- checkout: MyGitHubRepo
+- checkout: git://myproject/MyGitHubRepo@refs/heads/master/java-sample-2
+- checkout: git://myproject/MyGitHubRepo2@refs/heads/dev/sample-java-programs
 
 - script: dir $(Build.SourcesDirectory)
 - task: Maven@3
