@@ -19,11 +19,9 @@ pool:
 
 steps:
 - checkout: self
-  path: $(Pipeline.DefaultSourcesDirectory)/module1
 - checkout: mavenrepo
-  path: $(Pipeline.DefaultSourcesDirectory)/module2
-
-- script: dir $(Build.SourcesDirectory)
+  
+- script: dir $(Build.SourcesDirectory)/mavenrepo
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
