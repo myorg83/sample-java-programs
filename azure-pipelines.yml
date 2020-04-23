@@ -19,7 +19,7 @@ pool:
 
 steps:
 - checkout: self
-  root: $(Pipeline.DefaultSourcesDirectory)/module1
+  path: $(Pipeline.DefaultSourcesDirectory)/module1
 - checkout: mavenrepo
   path: $(Pipeline.DefaultSourcesDirectory)/module2
 
