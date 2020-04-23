@@ -4,11 +4,11 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 resources:
   repositories:
-  - repository: MyGitHubRepo
+  - repository: java-sample-2
     type: github
     endpoint: myorg83
     name:  myorg83/java-sample-2
-    ref: master/java-sample-2
+    ref: master
   - repository: MyGitHubRepo2
     type: github
     endpoint: myorg83
@@ -23,8 +23,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- checkout: self
-- checkout: git://myproject/MyGitHubRepo@refs/heads/master/java-sample-2
+- checkout: git://myproject/java-sample-2@refs/heads/master/java-sample-2
 - checkout: git://myproject/MyGitHubRepo2@refs/heads/dev/sample-java-programs
 
 - script: dir $(Build.SourcesDirectory)
