@@ -9,11 +9,6 @@ resources:
     endpoint: github.com_neerjol
     name:  myorg83/java-sample-2
     ref: master
-  - repository: MyGitHubRepo2
-    type: github
-    endpoint: myorg83
-    name:  myorg83/sample-java-programs
-    ref: dev
 
 trigger:
 - master
@@ -23,13 +18,13 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+- checkout: self
 - checkout: git://myproject/java-sample-2@refs/heads/master/java-sample-2
-- checkout: git://myproject/MyGitHubRepo2@refs/heads/dev/sample-java-programs
 
 - script: dir $(Build.SourcesDirectory)
 - task: Maven@3
   inputs:
-    mavenPomFile: '$(Agent.BuildDirectory)/pom.xml'
+    mavenPomFile: 'pom.xml'
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
