@@ -5,7 +5,7 @@ This repository contains working code samples which demonstrate Java integration
 
 The samples are organized into categories and common usage examples, just like our [API Reference Guide](http://developer.authorize.net/api/reference). Our API Reference Guide is an interactive reference for the Authorize.Net API. It explains the request and response parameters for each API method and has embedded code windows to allow you to send actual requests right within the API Reference Guide.
 
-From DEV
+
 
 ## Using the Sample Code
 
