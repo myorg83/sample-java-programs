@@ -21,7 +21,7 @@ steps:
 - checkout: self
 - checkout: mavenrepo
   
-- script: dir $(Build.SourcesDirectory)/mavenrepo
+- script: dir $(Build.SourcesDirectory)/sample-project-maven
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
