@@ -4,7 +4,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 resources:
   repositories:
-  - repository: java-sample-2
+  - repository: myorg83/java-sample-2
     type: github
     endpoint: myorg83
     name:  myorg83/java-sample-2
