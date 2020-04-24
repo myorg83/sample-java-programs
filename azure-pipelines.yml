@@ -8,8 +8,6 @@ resources:
     type: github
     endpoint: myorg83
     name:  myorg83/sample-project-maven
-    trigger:  # Optional; Triggers are enabled by default
-      batch: yes
     checkout: $(Build.SourcesDirectory)/sample-project-maven
     
 trigger:
