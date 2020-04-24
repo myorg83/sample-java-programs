@@ -9,10 +9,9 @@ resources:
     endpoint: myorg83
     name:  myorg83/sample-project-maven
     ref: master
-    trigger: master
     
 trigger:
-- dev
+- master
 
 pool:
   vmImage: 'ubuntu-latest'
