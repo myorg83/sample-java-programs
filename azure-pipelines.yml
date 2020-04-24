@@ -8,7 +8,8 @@ resources:
     type: github
     endpoint: myorg83
     name:  myorg83/sample-project-maven
-    ref: master
+    trigger:  # Optional; Triggers are enabled by default
+      batch: yes
     
 trigger:
 - master
@@ -21,10 +22,10 @@ steps:
 - checkout: mavenrepo
 
 - script: dir $(Build.SourcesDirectory)
-
+- script: echo $(Build.Repository.Name_
 - task: Maven@3
   inputs:
-    mavenPomFile: '$(Build.Repository.Name) | sed 's/myorg83//' | sed 's/^\///;s/\// /g'/pom.xml'
+    mavenPomFile: '$(Build.Repository.Name)/pom.xml'
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
