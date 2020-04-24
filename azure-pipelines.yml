@@ -8,6 +8,7 @@ resources:
     type: github
     endpoint: myorg83
     name:  myorg83/sample-project-maven
+    ref: dev
     trigger:  # Optional; Triggers are enabled by default
       batch: yes
     
