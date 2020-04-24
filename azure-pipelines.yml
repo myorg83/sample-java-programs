@@ -22,7 +22,7 @@ steps:
 - checkout: mavenrepo
 
 - script: dir $(Build.SourcesDirectory)
-- script: echo $(Build.Repository.Name_
+- script: echo $(Build.Repository.Name)
 - task: Maven@3
   inputs:
     mavenPomFile: '$(Build.Repository.Name)/pom.xml'
