@@ -8,9 +8,6 @@ resources:
     type: github
     endpoint: myorg83
     name:  myorg83/sample-project-maven
-    ref:
-    - dev
-    - master
     trigger:  # Optional; Triggers are enabled by default
       batch: yes
     
@@ -26,6 +23,9 @@ steps:
 
 - script: dir $(Build.SourcesDirectory)
 - script: echo $(Build.Repository.Name)
+- script: echo $(Build.Repository.Tfvc.Workspace)
+- script: echo $(Build.SourceBranchName)
+
 - task: Maven@3
   inputs:
     mavenPomFile: '$(Build.Repository.Name)/pom.xml'
