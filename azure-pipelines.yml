@@ -10,6 +10,7 @@ resources:
     name:  myorg83/sample-project-maven
     trigger:  # Optional; Triggers are enabled by default
       batch: yes
+    checkout: $(Build.SourcesDirectory)/sample-project-maven
     
 trigger:
 - master
@@ -18,8 +19,8 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- checkout: self
-- checkout: mavenrepo
+#- checkout: self
+#- checkout: mavenrepo
 
 - script: dir $(Build.SourcesDirectory)
 - script: echo $(Build.Repository.Name)
